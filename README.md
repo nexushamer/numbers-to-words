@@ -10,6 +10,7 @@ Running the project
 Execute el command 'mvn compile' and after that execution the command 'mvn spring-boot:run'
 
 Running the test
-Execute the command 'mvn test'
+Execute the command 'mvn test' for running the unit testing
 
 Deployment
+Execute the command 'mvn package' for generate the jar file
