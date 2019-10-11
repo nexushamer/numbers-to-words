@@ -31,12 +31,15 @@ Finally execute the jar file with the following command:
 Now the service is running
 
 Running the test
+
 Execute the command 'mvn test' for running the unit testing
 
 Deployment
+
 Execute the command 'mvn package' for generate the jar file
 
 How to test the API in local
+
 After start the project with maven or start the jar file the project is running in the port 8089.
 
 For test the service you can use any rest client like Postman or SoapUI, also you can copy the
