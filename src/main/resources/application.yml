@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: default
+
+---
+spring:
+  application:
+    name: Sonartype numbers to english words
+  profiles: default
+server:
+  servlet:
+    contextPath: /online-converter/services/api
+  port: 8089
+logging:
+  level:
+    ROOT: INFO
+    com.sonartype.numbertowords.controllers: DEBUG
+    com.sonartype.numbertowords.services: DEBUG
