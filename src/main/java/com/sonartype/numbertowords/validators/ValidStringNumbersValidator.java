@@ -10,8 +10,6 @@ public class ValidStringNumbersValidator implements ConstraintValidator<ValidStr
             return true;
         }catch (NumberFormatException e){
             return false;
-        }catch (Exception e){
-            return false;
         }
     }
 }

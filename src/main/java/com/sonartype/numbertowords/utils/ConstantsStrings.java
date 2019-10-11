@@ -6,5 +6,6 @@ public final class ConstantsStrings {
     public static final String INVALID_NUMBER_MESSAGE = "The number received is invalid, it's not a numeric value";
     public static final String INVALID_LARGE_NUMBER_MESSAGE =
             "The number received is invalid because it's greater than 10 digits";
+    public static final String DEFAULT_DELIMITER = " ";
 
 }
