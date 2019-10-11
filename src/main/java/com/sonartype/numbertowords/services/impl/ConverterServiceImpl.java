@@ -15,7 +15,7 @@ import static org.apache.commons.lang3.math.NumberUtils.isCreatable;
 @Service
 public class ConverterServiceImpl implements ConverterService {
     private static final Map<Integer, String> NUMBERS = new HashMap<>();
-    private static final String[] LARGE_NUMBERS = {"", "thousand", "million", "billion"};
+    private static final String[] NUMERATORS = {"", "thousand", "million", "billion"};
     private static final String HUNDRED = "hundred";
     private static final String NEGATIVE = "negative";
     private static final String AND_DELIMITER = "and";
@@ -53,7 +53,7 @@ public class ConverterServiceImpl implements ConverterService {
 
     @Override
     public String numbersToWords(String numbers) {
-        MultipleParameters parameters = checkAndReplaceNegativeSign(numbers);
+        final MultipleParameters parameters = checkAndReplaceNegativeSign(numbers);
 
         if (Integer.parseInt(parameters.numberWithoutSign) == 0) {
             return StringUtils.capitalize(NUMBERS.get(0));
@@ -72,7 +72,7 @@ public class ConverterServiceImpl implements ConverterService {
             final int hundreds = (currentGroup.length() > 2) ? Character.getNumericValue(currentGroup.charAt(2)) : -1;
 
             if (i > 0 && (unit != 0 || tens != 0 || hundreds != 0))
-                words.add(LARGE_NUMBERS[i]);
+                words.add(NUMERATORS[i]);
 
             processUnitsAndTens(words, tens, unit);
 
